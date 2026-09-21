@@ -30,10 +30,11 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v4
 
-    - name: Generate Gradle Wrapper
-      run: |
-        gradle wrapper --gradle-version 8.4
-        chmod +x gradlew
+     - name: Generate Gradle Wrapper
+  run: |
+    gradle --version
+    gradle wrapper --gradle-version 8.4 --distribution-type bin
+    chmod +x gradlew
 
     - name: Build Debug APK
       run: ./gradlew assembleDebug
