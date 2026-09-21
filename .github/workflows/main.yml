@@ -28,7 +28,7 @@ jobs:
         gradle-version: 8.4
 
     - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
+      uses: android-actions/setup-android@v4
 
     - name: Generate Gradle Wrapper
       run: |
